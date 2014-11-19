@@ -19,10 +19,17 @@
                 <executions>
                     <execution>
                         <phase>generate-sources</phase>
+                        <goals>
+                            <goal>sample</goal>
+                        </goals>
                         <configuration>
-                            <sourceDir>src/main/resources</sourceDir>
-                            <targetDir>src/main/generated-sources</targetDir>
-                            <targetPackage>com.littleinfinity</targetPackage>
+                            <input>
+                                <sourceDir>src/main/resources</sourceDir>
+                                <scanSubdirectories>true</scanSubdirectories>
+                            </input>
+                            <target>
+                                <overwrite>true</overwrite>
+                            </target>
                         </configuration>
                     </execution>
                 </executions>
