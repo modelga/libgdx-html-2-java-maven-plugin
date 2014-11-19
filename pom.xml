@@ -1,55 +1,83 @@
-<project>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.littleinfinity</groupId>
-    <artifactId>libgdx-html-2-java-maven-plugin</artifactId>
+    <artifactId>libgdx-html-2-java-maven-plugin-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>plugin</module>
+        <module>execution</module>
+    </modules>
     <properties>
         <roaster-jdt.version>2.9.0.Final</roaster-jdt.version>
         <jsoup.version>1.8.1</jsoup.version>
         <maven-plugin-api.version>3.2.3</maven-plugin-api.version>
         <gdx.version>1.4.1</gdx.version>
     </properties>
-    <packaging>maven-plugin</packaging>
+    <packaging>pom</packaging>
 
-    <name>LibGDX html to java maven plugin</name>
+    <name>LibGDX HTML to java maven plugin - parent</name>
 
     <developers>
         <developer>
             <name>Mateusz Odelga</name>
-            <roles>Leader</roles>
+            <roles>
+                <role>Leader</role>
+            </roles>
         </developer>
         <developer>
             <name>Adrian Skrobek</name>
-            <roles>Developer</roles>
+            <roles>
+                <role>Developer</role>
+            </roles>
         </developer>
     </developers>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.maven</groupId>
-            <artifactId>maven-plugin-api</artifactId>
-            <version>${maven-plugin-api.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.badlogicgames.gdx</groupId>
-            <artifactId>gdx</artifactId>
-            <version>${gdx.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jsoup</groupId>
-            <artifactId>jsoup</artifactId>
-            <version>${jsoup.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.forge.roaster</groupId>
-            <artifactId>roaster-api</artifactId>
-            <version>${roaster-jdt.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.forge.roaster</groupId>
-            <artifactId>roaster-jdt</artifactId>
-            <version>${roaster-jdt.version}</version>
-        </dependency>
-    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>libgdx-html-2-java-maven-execution</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-plugin-api</artifactId>
+                <version>${maven-plugin-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.badlogicgames.gdx</groupId>
+                <artifactId>gdx</artifactId>
+                <version>${gdx.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>${jsoup.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.forge.roaster</groupId>
+                <artifactId>roaster-api</artifactId>
+                <version>${roaster-jdt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.forge.roaster</groupId>
+                <artifactId>roaster-jdt</artifactId>
+                <version>${roaster-jdt.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>${project.groupId}</groupId>
+                    <artifactId>libgdx-html-2-java-maven-plugin</artifactId>
+                    <version>${project.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
