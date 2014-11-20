@@ -17,6 +17,8 @@
         <maven-plugin-api.version>3.2.3</maven-plugin-api.version>
         <gdx.version>1.4.1</gdx.version>
         <maven-plugin-annotations.version>3.3</maven-plugin-annotations.version>
+        <guice.version>3.0</guice.version>
+        <junit.version>4.11</junit.version>
     </properties>
     <packaging>pom</packaging>
 
@@ -49,10 +51,20 @@
                 <version>${maven-plugin-api.version}</version>
             </dependency>
             <dependency>
+				<groupId>com.google.inject</groupId>
+				<artifactId>guice</artifactId>
+				<version>${guice.version}</version>
+			</dependency>            
+            <dependency>
                 <groupId>org.apache.maven.plugin-tools</groupId>
                 <artifactId>maven-plugin-annotations</artifactId>
                 <version>${maven-plugin-annotations.version}</version>
             </dependency>
+            <dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+			</dependency>
             <dependency>
                 <groupId>com.badlogicgames.gdx</groupId>
                 <artifactId>gdx</artifactId>
