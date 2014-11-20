@@ -16,6 +16,7 @@
         <jsoup.version>1.8.1</jsoup.version>
         <maven-plugin-api.version>3.2.3</maven-plugin-api.version>
         <gdx.version>1.4.1</gdx.version>
+        <maven-plugin-annotations.version>3.3</maven-plugin-annotations.version>
     </properties>
     <packaging>pom</packaging>
 
@@ -48,6 +49,11 @@
                 <version>${maven-plugin-api.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.apache.maven.plugin-tools</groupId>
+                <artifactId>maven-plugin-annotations</artifactId>
+                <version>${maven-plugin-annotations.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.badlogicgames.gdx</groupId>
                 <artifactId>gdx</artifactId>
                 <version>${gdx.version}</version>
@@ -76,6 +82,15 @@
                     <groupId>${project.groupId}</groupId>
                     <artifactId>libgdx-html-2-java-maven-plugin</artifactId>
                     <version>${project.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.2</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
