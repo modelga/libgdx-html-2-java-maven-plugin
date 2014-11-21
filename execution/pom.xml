@@ -20,7 +20,7 @@
                     <execution>
                         <phase>generate-sources</phase>
                         <goals>
-                            <goal>sample</goal>
+                            <goal>generate</goal>
                         </goals>
                         <configuration>
                             <input>
@@ -28,6 +28,7 @@
                                 <scanSubdirectories>true</scanSubdirectories>
                             </input>
                             <target>
+                                <packageName>com.littleinfinity.libgdx.html.example.layouts</packageName>
                                 <overwrite>true</overwrite>
                             </target>
                         </configuration>
