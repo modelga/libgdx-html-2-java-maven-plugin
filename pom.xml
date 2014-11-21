@@ -21,6 +21,7 @@
         <junit.version>4.11</junit.version>
         <commons-collections.version>3.2.1</commons-collections.version>
         <commons-lang3.version>3.3.2</commons-lang3.version>
+        <guava.version>18.0</guava.version>
     </properties>
     <packaging>pom</packaging>
 
