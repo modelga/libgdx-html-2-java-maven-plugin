@@ -12,11 +12,14 @@
         <module>execution</module>
     </modules>
     <properties>
-        <roaster-jdt.version>2.9.0.Final</roaster-jdt.version>
+        <roaster.version>2.9.0.Final</roaster.version>
         <jsoup.version>1.8.1</jsoup.version>
         <maven-plugin-api.version>3.2.3</maven-plugin-api.version>
         <gdx.version>1.4.1</gdx.version>
         <maven-plugin-annotations.version>3.3</maven-plugin-annotations.version>
+        <guava.version>18.0</guava.version>
+        <commons-collections.version>3.2.1</commons-collections.version>
+        <commons-lang3.version>3.3.2</commons-lang3.version>
     </properties>
     <packaging>pom</packaging>
 
@@ -44,6 +47,11 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.maven</groupId>
                 <artifactId>maven-plugin-api</artifactId>
                 <version>${maven-plugin-api.version}</version>
@@ -54,9 +62,19 @@
                 <version>${maven-plugin-annotations.version}</version>
             </dependency>
             <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${commons-collections.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.badlogicgames.gdx</groupId>
                 <artifactId>gdx</artifactId>
                 <version>${gdx.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jsoup</groupId>
@@ -66,12 +84,12 @@
             <dependency>
                 <groupId>org.jboss.forge.roaster</groupId>
                 <artifactId>roaster-api</artifactId>
-                <version>${roaster-jdt.version}</version>
+                <version>${roaster.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jboss.forge.roaster</groupId>
                 <artifactId>roaster-jdt</artifactId>
-                <version>${roaster-jdt.version}</version>
+                <version>${roaster.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
