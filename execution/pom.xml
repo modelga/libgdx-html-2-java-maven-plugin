@@ -11,6 +11,8 @@
 
     <artifactId>libgdx-html-2-java-maven-execution</artifactId>
 
+    <name>LibGDX HTML to java maven plugin - execution</name>
+
     <build>
         <plugins>
             <plugin>
@@ -24,6 +26,8 @@
                         </goals>
                         <configuration>
                             <input>
+                                <generatorImplementation>com.littleinfinity.libgdx.html.generator.JavaClassGenerator
+                                </generatorImplementation>
                                 <sourceDir>src/main/resources</sourceDir>
                                 <scanSubdirectories>true</scanSubdirectories>
                             </input>
