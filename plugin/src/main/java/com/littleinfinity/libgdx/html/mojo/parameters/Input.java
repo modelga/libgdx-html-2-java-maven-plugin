@@ -1,4 +1,4 @@
-package com.littleinfinity.libgdx.html.parameters;
+package com.littleinfinity.libgdx.html.mojo.parameters;
 
 import java.io.File;
 

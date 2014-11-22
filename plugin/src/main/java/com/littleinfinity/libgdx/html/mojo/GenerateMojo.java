@@ -1,7 +1,7 @@
 package com.littleinfinity.libgdx.html.mojo;
 
-import com.littleinfinity.libgdx.html.parameters.Input;
-import com.littleinfinity.libgdx.html.parameters.Target;
+import com.littleinfinity.libgdx.html.mojo.parameters.Input;
+import com.littleinfinity.libgdx.html.mojo.parameters.Target;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
