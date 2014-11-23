@@ -7,8 +7,8 @@ import org.jsoup.nodes.Element;
 
 // TODO Return type to be discussed
 @Singleton
-@ParsableTags(tags = {"head"})
-public class HeadParser extends AnnotatedHTMLTagParser<Object> {
+@ParsableTags(tags = {"const"})
+public class ConstParser extends AnnotatedHTMLTagParser<Object> {
 
     @Override
     public Object parse(Element element) {
