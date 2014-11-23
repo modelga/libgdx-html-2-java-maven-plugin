@@ -1,8 +1,6 @@
 package com.littleinfinity.libgdx.html.cdi;
 
 import com.google.inject.AbstractModule;
-import com.littleinfinity.libgdx.html.generator.Generator;
-import com.littleinfinity.libgdx.html.generator.JavaClassGenerator;
 import com.littleinfinity.libgdx.html.generator.Config;
 import com.littleinfinity.libgdx.html.mojo.parameters.Input;
 import com.littleinfinity.libgdx.html.mojo.parameters.Target;
@@ -19,6 +17,5 @@ public class ConfigModule extends AbstractModule {
     @Override
     protected void configure() {
         bind(Config.class).toInstance(new Config(input, target));
-        bind(Generator.class).to(JavaClassGenerator.class);
     }
 }
