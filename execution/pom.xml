@@ -26,8 +26,6 @@
                         </goals>
                         <configuration>
                             <input>
-                                <generatorImplementation>com.littleinfinity.libgdx.html.generator.JavaClassGenerator
-                                </generatorImplementation>
                                 <sourceDir>src/main/resources</sourceDir>
                                 <scanSubdirectories>true</scanSubdirectories>
                             </input>
