@@ -11,6 +11,8 @@
 
     <artifactId>libgdx-html-2-java-maven-execution</artifactId>
 
+    <name>LibGDX HTML to java maven plugin - execution</name>
+
     <build>
         <plugins>
             <plugin>
