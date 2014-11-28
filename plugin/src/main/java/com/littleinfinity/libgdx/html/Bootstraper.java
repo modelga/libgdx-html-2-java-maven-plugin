@@ -1,7 +1,6 @@
 package com.littleinfinity.libgdx.html;
 
 import com.google.inject.Injector;
-import com.littleinfinity.libgdx.html.generator.Config;
 
 public abstract class Bootstraper {
 
