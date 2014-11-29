@@ -19,7 +19,7 @@ public class AnnotatedHTMLTagParserTest {
     @Test
     public void shouldBeAbleToParse() throws Exception {
         // given
-        Element element = new Element(Tag.valueOf("tag"), "");
+        Element element = createTag("tag");
 
         // when
         boolean ableToParse = parser.isAbleToParse(element);
@@ -28,10 +28,14 @@ public class AnnotatedHTMLTagParserTest {
         assert ableToParse : "This element should be parseable";
     }
 
+    private Element createTag(String tag) {
+        return new Element(Tag.valueOf(tag), "");
+    }
+
     @Test
     public void shouldNotBeAbleToParse() throws Exception {
         // given
-        Element element = new Element(Tag.valueOf("anotherTag"), "");
+        Element element = createTag("anotherTag");
 
         // when
         boolean ableToParse = parser.isAbleToParse(element);
