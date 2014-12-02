@@ -4,6 +4,7 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.littleinfinity.libgdx.html.Bootstraper;
 import com.littleinfinity.libgdx.html.cdi.ConfigModule;
+import com.littleinfinity.libgdx.html.cdi.ModuleConfigurer;
 import com.littleinfinity.libgdx.html.mojo.parameters.Input;
 import com.littleinfinity.libgdx.html.mojo.parameters.Target;
 import org.apache.maven.plugin.AbstractMojo;
@@ -33,7 +34,7 @@ public class GenerateMojo extends AbstractMojo {
     }
 
     private void bootstrap() throws IOException {
-        Injector injector = Guice.createInjector(new ConfigModule(input, target));
+        Injector injector = ModuleConfigurer.getInjector(input, target);
         Bootstraper bootstraper = injector.getInstance(input.getBootstraper());
         bootstraper.bootstrap();
     }
