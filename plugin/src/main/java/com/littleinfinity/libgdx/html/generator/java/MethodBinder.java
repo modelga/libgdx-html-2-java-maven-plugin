@@ -1,6 +1,6 @@
 package com.littleinfinity.libgdx.html.generator.java;
 
-import org.jboss.forge.roaster.model.source.JavaClassSource;
+        import org.jboss.forge.roaster.model.source.JavaClassSource;
 
 public class MethodBinder implements Binder<MethodComponent> {
 

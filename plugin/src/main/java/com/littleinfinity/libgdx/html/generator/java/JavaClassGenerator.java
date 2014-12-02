@@ -29,7 +29,6 @@ public class JavaClassGenerator implements Generator {
     @Override
     public void generate(File f) {
         JavaClassSource source = Roaster.create(JavaClassSource.class);
-
         throw new NotImplementedException("");
     }
 }
