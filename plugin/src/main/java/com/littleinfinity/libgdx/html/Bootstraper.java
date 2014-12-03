@@ -4,8 +4,8 @@ import com.google.inject.Injector;
 
 public abstract class Bootstraper {
 
-    private final Injector injector;
-    private final Config config;
+    protected final Injector injector;
+    protected final Config config;
 
     public Bootstraper(Injector injector, Config config) {
         this.injector = injector;
