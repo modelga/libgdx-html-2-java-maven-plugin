@@ -1,4 +1,4 @@
-package com.littleinfinity.libgdx.html.generator;
+package com.littleinfinity.libgdx.html;
 
 import com.google.inject.Singleton;
 import com.littleinfinity.libgdx.html.mojo.parameters.Input;

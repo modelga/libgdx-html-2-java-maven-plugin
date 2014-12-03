@@ -1,5 +1,7 @@
 package com.littleinfinity.libgdx.html.parser.head;
 
+import org.jsoup.nodes.Element;
+import org.jsoup.parser.Tag;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -14,7 +16,7 @@ public class HeadParserTest {
     @Ignore
     public void shouldParseElementInstance() {
         HeadParser parser = new HeadParser();
-        Object parse = parser.parse(null);
+        Object parse = parser.parse(new Element(Tag.valueOf("head"), ""));
         assert parse != null;
     }
 }

@@ -1,7 +1,9 @@
 package com.littleinfinity.libgdx.html.generator;
 
+import org.jboss.forge.roaster.model.source.JavaClassSource;
+
 import java.io.File;
 
 public interface Generator {
-    void generate(File f);
+    JavaClassSource generate(File f);
 }

@@ -8,13 +8,14 @@ import java.io.File;
 
 public class Input {
 
+    private static final Class<JavaClassBootstraper> DEFAULT_BOOTSTRAPPER = JavaClassBootstraper.class;
     private String bootstraper;
     private File sourceDir;
     private boolean scanSubdirectories;
 
     public Class<? extends Bootstraper> getBootstraper() {
         try {
-            Class<?> clazz = Class.forName(Objects.firstNonNull(bootstraper, JavaClassBootstraper.class.getName()));
+            Class<?> clazz = Class.forName(Objects.firstNonNull(bootstraper, DEFAULT_BOOTSTRAPPER.getName()));
             assert clazz.getSuperclass() != null && clazz.isAssignableFrom(Bootstraper.class) : "class " + bootstraper + " does not implements Generator interface";
             return (Class<? extends Bootstraper>) clazz;
         } catch (ClassNotFoundException | AssertionError e) {
