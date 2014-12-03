@@ -1,4 +1,4 @@
-package com.littleinfinity.libgdx.html.util.AbstractPopulatingFactory;
+package com.littleinfinity.libgdx.html.util;
 
 import com.littleinfinity.libgdx.html.util.FactoryDependant;
 

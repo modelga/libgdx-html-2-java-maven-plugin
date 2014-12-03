@@ -2,7 +2,7 @@ package com.littleinfinity.libgdx.html.generator.java;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import com.littleinfinity.libgdx.html.util.AbstractPopulatingFactory.AbstractPopulatingFactory;
+import com.littleinfinity.libgdx.html.util.AbstractPopulatingFactory;
 import com.littleinfinity.libgdx.html.util.Reflection;
 
 import java.util.Set;
