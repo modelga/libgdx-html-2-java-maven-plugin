@@ -20,7 +20,7 @@ public class HeadParseFactory extends AbstractPopulatingFactory {
         populateFactoryDependantWithFactoryReference(parsers);
     }
 
-    public <T> HTMLTagParser<T> getProperParser(String tag) {
+    public <T extends JavaSourceComponent> HTMLTagParser<T> getProperParser(String tag) {
         for (HTMLTagParser<? extends JavaSourceComponent> parser : parsers) {
             if (parser.isAbleToParse(new Element(Tag.valueOf(tag), ""))) {
                 return (HTMLTagParser<T>) parser;
