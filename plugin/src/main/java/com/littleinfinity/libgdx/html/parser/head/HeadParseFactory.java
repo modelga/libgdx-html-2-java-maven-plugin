@@ -17,7 +17,7 @@ public class HeadParseFactory extends AbstractPopulatingFactory {
     @Inject
     public HeadParseFactory(Set<HTMLTagParser<? extends JavaSourceComponent>> parsers) {
         this.parsers = parsers;
-        populateParsersWithFactoryReference(parsers);
+        populateFactoryDependantWithFactoryReference(parsers);
     }
 
     public <T> HTMLTagParser<T> getProperParser(String tag) {

@@ -1,5 +1,5 @@
 package com.littleinfinity.libgdx.html.util;
 
-public interface FactoryDependend<T> {
+public interface FactoryDependant<T> {
     void setFactory(T factory);
 }

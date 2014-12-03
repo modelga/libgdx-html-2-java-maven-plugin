@@ -6,12 +6,12 @@ import com.littleinfinity.libgdx.html.generator.java.JavaSourceComponent;
 import com.littleinfinity.libgdx.html.parser.AnnotatedHTMLTagParser;
 import com.littleinfinity.libgdx.html.parser.HTMLTagParser;
 import com.littleinfinity.libgdx.html.parser.ParsableTags;
-import com.littleinfinity.libgdx.html.util.FactoryDependend;
+import com.littleinfinity.libgdx.html.util.FactoryDependant;
 import org.jsoup.nodes.Element;
 
 @Singleton
 @ParsableTags(tags = {"head"})
-public class HeadParser extends AnnotatedHTMLTagParser<JavaSourceComponent> implements FactoryDependend<HeadParseFactory> {
+public class HeadParser extends AnnotatedHTMLTagParser<JavaSourceComponent> implements FactoryDependant<HeadParseFactory> {
 
     private HeadParseFactory factory;
 
