@@ -1,18 +1,17 @@
-package com.littleinfinity.libgdx.html.parser.head;
+package com.littleinfinity.libgdx.html.parser;
 
 import com.google.inject.Injector;
 import com.littleinfinity.libgdx.html.InjectorUtil;
 import com.littleinfinity.libgdx.html.generator.java.JavaSourceComponent;
-import com.littleinfinity.libgdx.html.parser.HTMLTagParser;
 import org.fest.assertions.Assertions;
 import org.junit.Test;
 
-public class HeadParseFactoryTest {
+public class ParserFactoryTest {
     Injector injector = InjectorUtil.getJavaInjector();
 
     @Test
     public void shouldGetHeadParseFactory() {
-        HeadParseFactory factory = injector.getInstance(HeadParseFactory.class);
+        ParserFactory factory = injector.getInstance(ParserFactory.class);
 
         Assertions.assertThat(factory).isNotNull();
     }
@@ -20,7 +19,7 @@ public class HeadParseFactoryTest {
     @Test
     public void should() {
         // given
-        HeadParseFactory factory = injector.getInstance(HeadParseFactory.class);
+        ParserFactory factory = injector.getInstance(ParserFactory.class);
 
         // when
         HTMLTagParser<JavaSourceComponent> headParser = factory.getProperParser("head");

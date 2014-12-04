@@ -11,7 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>libgdx-html-2-java-maven-plugin</artifactId>
-    <name>LibGDX HTML to Java maven plugin</name>
+    <name>LibGDX HTML to java maven plugin - plugin core</name>
 
     <dependencies>
         <dependency>

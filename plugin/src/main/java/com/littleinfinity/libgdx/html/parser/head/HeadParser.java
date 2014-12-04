@@ -6,14 +6,15 @@ import com.littleinfinity.libgdx.html.generator.java.JavaSourceComponent;
 import com.littleinfinity.libgdx.html.parser.AnnotatedHTMLTagParser;
 import com.littleinfinity.libgdx.html.parser.HTMLTagParser;
 import com.littleinfinity.libgdx.html.parser.ParsableTags;
+import com.littleinfinity.libgdx.html.parser.ParserFactory;
 import com.littleinfinity.libgdx.html.util.FactoryDependant;
 import org.jsoup.nodes.Element;
 
 @Singleton
 @ParsableTags(tags = {"head"})
-public class HeadParser extends AnnotatedHTMLTagParser<JavaSourceComponent> implements FactoryDependant<HeadParseFactory> {
+public class HeadParser extends AnnotatedHTMLTagParser<JavaSourceComponent> implements FactoryDependant<ParserFactory> {
 
-    private HeadParseFactory factory;
+    private ParserFactory factory;
 
     @Override
     public JavaSourceComponent parse(Element element) {
@@ -22,7 +23,7 @@ public class HeadParser extends AnnotatedHTMLTagParser<JavaSourceComponent> impl
     }
 
     @Override
-    public void setFactory(HeadParseFactory factory) {
+    public void setFactory(ParserFactory factory) {
         this.factory = factory;
     }
 }

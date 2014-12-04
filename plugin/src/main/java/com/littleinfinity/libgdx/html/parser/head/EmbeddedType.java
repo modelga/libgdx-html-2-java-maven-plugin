@@ -10,7 +10,12 @@ public enum EmbeddedType implements TypeResolver {
     INT("int", "integer") {
         @Override
         boolean isCorrect(String value) {
-            return checkCorrectness(() -> value.toString());
+            return checkCorrectness(() -> Integer.parseInt(value));
+        }
+    }, LONG("long", "bigint") {
+        @Override
+        boolean isCorrect(String value) {
+            return checkCorrectness(() -> Long.parseLong(value));
         }
     }, STRING("string", "text") {
         @Override
@@ -27,6 +32,11 @@ public enum EmbeddedType implements TypeResolver {
         boolean isCorrect(String value) {
             return checkCorrectness(() -> Float.parseFloat(value));
         }
+    }, BOOLEAN("bool", "boolean") {
+        @Override
+        boolean isCorrect(String value) {
+            return checkCorrectness(() -> Boolean.parseBoolean(value));
+        }
     };
 
     private final Collection<String> allowedNames;
@@ -34,6 +44,7 @@ public enum EmbeddedType implements TypeResolver {
     private EmbeddedType(String... names) {
         allowedNames = asList(names);
     }
+
 
     abstract boolean isCorrect(String value);
 

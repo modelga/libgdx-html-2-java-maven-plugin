@@ -1,4 +1,4 @@
-package com.littleinfinity.libgdx.html.parser.head;
+package com.littleinfinity.libgdx.html.parser;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
@@ -11,11 +11,11 @@ import org.jsoup.parser.Tag;
 import java.util.Set;
 
 @Singleton
-public class HeadParseFactory extends AbstractPopulatingFactory {
+public class ParserFactory extends AbstractPopulatingFactory {
     private Set<HTMLTagParser<? extends JavaSourceComponent>> parsers;
 
     @Inject
-    public HeadParseFactory(Set<HTMLTagParser<? extends JavaSourceComponent>> parsers) {
+    public ParserFactory(Set<HTMLTagParser<? extends JavaSourceComponent>> parsers) {
         this.parsers = parsers;
         populateFactoryDependantWithFactoryReference(parsers);
     }
