@@ -1,12 +1,9 @@
 package com.littleinfinity.libgdx.html.generator.java;
 
-import com.google.inject.Inject;
 import com.google.inject.Injector;
 import com.littleinfinity.libgdx.html.InjectorUtil;
 import org.fest.assertions.Assertions;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class BinderFactoryTest {
 
@@ -29,7 +26,7 @@ public class BinderFactoryTest {
         BinderFactory binderFactory = injector.getInstance(BinderFactory.class);
 
         // when
-        Binder<MethodComponent> binder = binderFactory.getBinderForComponent(MethodComponent.class);
+        Binder<MethodComponent> binder = binderFactory.getBinderForComponentType(MethodComponent.class);
 
         // then
         Assertions.assertThat(binder).isNotNull();
@@ -41,7 +38,7 @@ public class BinderFactoryTest {
         BinderFactory binderFactory = injector.getInstance(BinderFactory.class);
 
         // when
-        Binder<UnBindedComponent> binder = binderFactory.getBinderForComponent(UnBindedComponent.class);
+        Binder<UnBindedComponent> binder = binderFactory.getBinderForComponentType(UnBindedComponent.class);
 
         // then
         Assertions.assertThat(binder).isNull();

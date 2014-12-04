@@ -18,7 +18,11 @@ public class BinderFactory extends AbstractPopulatingFactory {
         populateFactoryDependantWithFactoryReference(binders);
     }
 
-    public <T extends JavaSourceComponent> Binder<T> getBinderForComponent(Class<? extends JavaSourceComponent> component) {
+    public <T extends JavaSourceComponent> Binder<T> getBinderForComponent(JavaSourceComponent component) {
+        return getBinderForComponentType(component.getClass());
+    }
+
+    public <T extends JavaSourceComponent> Binder<T> getBinderForComponentType(Class<? extends JavaSourceComponent> component) {
         for (Binder binder : binders) {
             if (Reflection.isObjectImplementingSpecificGenericInterface(binder, Binder.class, component)) {
                 return binder;

@@ -15,7 +15,7 @@ public class ComplexBinder implements Binder<ComplexComponent>, FactoryDependant
     }
 
     private void delegateBinding(JavaClassSource source, JavaSourceComponent innerComponent) {
-        Binder<JavaSourceComponent> delegatedBinder = factory.getBinderForComponent(innerComponent.getClass());
+        Binder<JavaSourceComponent> delegatedBinder = factory.getBinderForComponent(innerComponent);
         delegatedBinder.bind(source, innerComponent);
     }
 
