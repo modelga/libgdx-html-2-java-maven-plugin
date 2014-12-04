@@ -13,6 +13,7 @@ import org.jsoup.nodes.Element;
 
 import java.util.Optional;
 
+import static java.util.Objects.requireNonNull;
 import static java.util.Optional.ofNullable;
 
 @Singleton
@@ -23,6 +24,7 @@ public class HeadParser extends AnnotatedHTMLTagParser<ComplexComponent> impleme
 
     @Override
     public ComplexComponent parse(Element element) {
+        requireNonNull(element, "Passed element cannot be null!");
         ComplexComponent complexComponent = new ComplexComponent();
         HTMLTagParser<ImportComponent> importParser = factory.getProperParser("import");
         for (Element child : element.children()) {

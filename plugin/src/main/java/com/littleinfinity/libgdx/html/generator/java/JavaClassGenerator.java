@@ -36,6 +36,9 @@ public class JavaClassGenerator implements Generator {
     }
 
     private ComplexComponent tryParse(Document document) {
+        if (!documentParser.isAbleToParse(document)) {
+            throw new IllegalStateException("Passed document is in improper state!");
+        }
         return documentParser.parse(document);
     }
 
