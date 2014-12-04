@@ -27,14 +27,19 @@ public class JavaClassGenerator implements Generator {
     }
 
     @Override
-    public JavaClassSource generate(File f) {
+    public JavaClassSource generate(File inputFile) {
         JavaClassSource source = Roaster.create(JavaClassSource.class);
-        Document document = tryParseDocument(f);
-        ComplexComponent component = documentParser.parse(document);
+        Document document = tryParseFileToDocument(inputFile);
+        ComplexComponent complexComponent = tryParse(document);
+        binderFactory.getBinderForComponent(complexComponent).bind(source, complexComponent);
         return source;
     }
 
-    private Document tryParseDocument(File f) {
+    private ComplexComponent tryParse(Document document) {
+        return documentParser.parse(document);
+    }
+
+    private Document tryParseFileToDocument(File f) {
         Parser parser = Parser.xmlParser();
         try {
             return parser.parseInput(IOUtils.toString(f.toURI()), "");
