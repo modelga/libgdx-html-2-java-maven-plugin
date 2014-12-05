@@ -9,9 +9,7 @@ public class ComplexBinder implements Binder<ComplexComponent>, FactoryDependant
 
     @Override
     public void bind(JavaClassSource source, ComplexComponent component) {
-        for (JavaSourceComponent innerComponent : component.getAll()) {
-            delegateBinding(source, innerComponent);
-        }
+        component.getAll().forEach((innerComponent) -> delegateBinding(source, innerComponent));
     }
 
     private void delegateBinding(JavaClassSource source, JavaSourceComponent innerComponent) {
