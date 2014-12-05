@@ -24,6 +24,7 @@
         <guava.version>14.0.1</guava.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <fest-assert.version>1.4</fest-assert.version>
+        <commons-io.version>2.4</commons-io.version>
     </properties>
     <packaging>pom</packaging>
 
@@ -54,6 +55,11 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven</groupId>

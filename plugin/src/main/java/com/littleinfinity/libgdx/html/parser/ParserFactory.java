@@ -3,7 +3,6 @@ package com.littleinfinity.libgdx.html.parser;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.littleinfinity.libgdx.html.generator.java.JavaSourceComponent;
-import com.littleinfinity.libgdx.html.parser.HTMLTagParser;
 import com.littleinfinity.libgdx.html.util.AbstractPopulatingFactory;
 import org.jsoup.nodes.Element;
 import org.jsoup.parser.Tag;
