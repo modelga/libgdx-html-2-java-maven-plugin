@@ -25,6 +25,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <fest-assert.version>1.4</fest-assert.version>
         <commons-io.version>2.4</commons-io.version>
+        <mockito-core.version>1.9.5</mockito-core.version>
     </properties>
     <packaging>pom</packaging>
 
@@ -95,6 +96,11 @@
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito-core.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.badlogicgames.gdx</groupId>
