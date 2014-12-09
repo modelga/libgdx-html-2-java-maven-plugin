@@ -11,6 +11,7 @@ import static org.mockito.Mockito.verify;
 
 public class ComplexBinderTest {
 
+    public static final String FICTIONAL_CLASS_NAME = "FictionalClass";
     private static ComplexBinder binder;
     private FictionalBinder fictionalBinder;
     private JavaClassSource classSource;
@@ -24,16 +25,16 @@ public class ComplexBinderTest {
 
         @Override
         public void bind(JavaClassSource source, FictionalComponent component) {
-
+            source.setName(FICTIONAL_CLASS_NAME);
         }
     }
 
     @Before
     public void prepareFactory() throws Exception {
         binder = new ComplexBinder();
-        fictionalBinder = mock(FictionalBinder.class);
+        fictionalBinder = new FictionalBinder();
         classSource = mock(JavaClassSource.class);
-        fictionalComponent = mock(FictionalComponent.class);
+        fictionalComponent = new FictionalComponent();
         binder.setFactory(new BinderFactory(newHashSet(fictionalBinder)));
     }
 
@@ -47,7 +48,7 @@ public class ComplexBinderTest {
         binder.bind(classSource, component);
 
         //then
-        verify(fictionalBinder, times(1)).bind(classSource, fictionalComponent);
+        verify(classSource, times(1)).setName(FICTIONAL_CLASS_NAME);
     }
 
     @Test(expected = NullPointerException.class)
