@@ -6,7 +6,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class Reflection {
+public final class Reflection {
+
+    private Reflection() {
+    }
 
     public static boolean isObjectImplementingSpecificGenericInterface(Object object, Class<?> iface, Class<?>... typeArguments) {
         List<Type> genericInterfaces = Arrays.asList(object.getClass().getGenericInterfaces());

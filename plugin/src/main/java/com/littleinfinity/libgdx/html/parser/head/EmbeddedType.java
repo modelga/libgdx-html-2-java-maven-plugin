@@ -45,7 +45,6 @@ public enum EmbeddedType implements TypeResolver {
         allowedNames = asList(names);
     }
 
-
     abstract boolean isCorrect(String value);
 
     public final EmbeddedType getConverter(String value) {

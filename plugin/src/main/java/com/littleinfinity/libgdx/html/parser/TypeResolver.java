@@ -1,3 +1,4 @@
 package com.littleinfinity.libgdx.html.parser;
 
-public interface TypeResolver {}
+public interface TypeResolver {
+}

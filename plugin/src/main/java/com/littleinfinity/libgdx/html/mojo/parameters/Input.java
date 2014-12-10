@@ -16,11 +16,17 @@ public class Input {
     public Class<? extends Bootstraper> getBootstraper() {
         try {
             Class<?> clazz = Class.forName(Objects.firstNonNull(bootstraper, DEFAULT_BOOTSTRAPPER.getName()));
-            assert clazz.getSuperclass() != null && clazz.isAssignableFrom(Bootstraper.class) : "class " + bootstraper + " does not implements Generator interface";
+            if (isImplementingBoostrapper(clazz)) {
+                throw new IllegalArgumentException("class " + clazz.getName() + " does not implements Bootrapper interface");
+            }
             return (Class<? extends Bootstraper>) clazz;
         } catch (ClassNotFoundException | AssertionError e) {
             throw new IllegalArgumentException(e);
         }
+    }
+
+    private boolean isImplementingBoostrapper(Class<?> clazz) {
+        return clazz.getSuperclass() != null && clazz.isAssignableFrom(Bootstraper.class);
     }
 
     public boolean isScanSubdirectories() {
