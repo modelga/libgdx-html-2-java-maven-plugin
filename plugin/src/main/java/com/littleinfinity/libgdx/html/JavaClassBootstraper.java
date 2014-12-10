@@ -21,7 +21,7 @@ public class JavaClassBootstraper extends Bootstraper {
     @Override
     public void bootstrap() {
         try {
-            Files.walkFileTree(config.getSourceDir().toPath(), new HtmlFileVisitor(classGenerator));
+            Files.walkFileTree(getConfig().getSourceDir().toPath(), new HtmlFileVisitor(classGenerator));
         } catch (IOException e) {
             throw new InputMismatchException(e.getMessage());
         }

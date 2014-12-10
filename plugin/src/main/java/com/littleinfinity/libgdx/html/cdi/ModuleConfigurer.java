@@ -1,6 +1,5 @@
 package com.littleinfinity.libgdx.html.cdi;
 
-import com.google.common.collect.Lists;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
@@ -13,6 +12,8 @@ import java.util.ArrayList;
 import static com.google.common.collect.Lists.newArrayList;
 
 public final class ModuleConfigurer {
+    private ModuleConfigurer() {
+    }
 
     public static Injector getInjector(Input input, Target target) throws IOException {
         ArrayList<Module> modules = newArrayList();

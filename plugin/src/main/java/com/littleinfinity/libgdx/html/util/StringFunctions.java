@@ -5,6 +5,9 @@ import static java.util.Arrays.asList;
 
 public final class StringFunctions {
 
+    private StringFunctions() {
+    }
+
     public static Iterable<String> stringsToLower(String[] strings) {
         return transform(asList(strings), (value) -> value.toLowerCase());
     }
