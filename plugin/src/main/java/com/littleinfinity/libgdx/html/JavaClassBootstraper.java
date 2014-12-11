@@ -20,14 +20,14 @@ public class JavaClassBootstraper extends Bootstraper {
     }
 
     @Override
-    public Injector getChildInjector() {
+    public Injector getInjector() {
         return childInjector;
     }
 
     @Override
     public void bootstrap() {
         try {
-            HtmlFileVisitor fileVisitor = getChildInjector().getInstance(HtmlFileVisitor.class);
+            HtmlFileVisitor fileVisitor = getInjector().getInstance(HtmlFileVisitor.class);
             Files.walkFileTree(getConfig().getSourceDir().toPath(), fileVisitor);
         } catch (IOException e) {
             throw new InputMismatchException(e.getMessage());

@@ -12,7 +12,7 @@ public abstract class Bootstraper {
         this.config = config;
     }
 
-    public Injector getChildInjector() {
+    public Injector getInjector() {
         return injector;
     }
 
