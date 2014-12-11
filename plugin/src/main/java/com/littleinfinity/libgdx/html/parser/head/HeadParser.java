@@ -2,7 +2,6 @@ package com.littleinfinity.libgdx.html.parser.head;
 
 import com.google.inject.Singleton;
 import com.littleinfinity.libgdx.html.generator.java.ComplexComponent;
-import com.littleinfinity.libgdx.html.generator.java.ImportComponent;
 import com.littleinfinity.libgdx.html.generator.java.JavaSourceComponent;
 import com.littleinfinity.libgdx.html.parser.AnnotatedHTMLTagParser;
 import com.littleinfinity.libgdx.html.parser.HTMLTagParser;
@@ -26,7 +25,6 @@ public class HeadParser extends AnnotatedHTMLTagParser<ComplexComponent> impleme
     public ComplexComponent parse(Element element) {
         requireNonNull(element, "Passed element cannot be null!");
         ComplexComponent complexComponent = new ComplexComponent();
-        HTMLTagParser<ImportComponent> importParser = factory.getProperParser("import");
         for (Element child : element.children()) {
             Optional<HTMLTagParser<JavaSourceComponent>> parser = ofNullable(factory.getProperParser(child.tagName()));
             if (parser.isPresent()) {

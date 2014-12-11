@@ -13,10 +13,15 @@ public class HeadParserTest {
     }
 
     @Test
-    @Ignore
-    public void shouldParseElementInstance() {
+    public void shouldParseEmptyElement() {
+        // given
         HeadParser parser = new HeadParser();
-        Object parse = parser.parse(new Element(Tag.valueOf("head"), ""));
-        assert parse != null;
+        Element head = new Element(Tag.valueOf("head"), "");
+
+        // when
+        ComplexComponent parsed = parser.parse(head);
+
+        // then
+        assertThat(parsed).isNotNull();
     }
 }
