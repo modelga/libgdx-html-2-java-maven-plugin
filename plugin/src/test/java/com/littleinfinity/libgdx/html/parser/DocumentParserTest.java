@@ -2,11 +2,11 @@ package com.littleinfinity.libgdx.html.parser;
 
 import com.littleinfinity.libgdx.html.generator.java.ComplexComponent;
 import com.littleinfinity.libgdx.html.generator.java.JavaSourceComponent;
-import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.parser.Tag;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.fest.assertions.Assertions.assertThat;
