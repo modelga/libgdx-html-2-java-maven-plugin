@@ -3,24 +3,28 @@ package com.littleinfinity.libgdx.html.parser.head;
 import com.littleinfinity.libgdx.html.generator.java.ComplexComponent;
 import com.littleinfinity.libgdx.html.generator.java.JavaSourceComponent;
 import com.littleinfinity.libgdx.html.parser.AnnotatedHTMLTagParser;
+import com.littleinfinity.libgdx.html.parser.HTMLTagParser;
+import com.littleinfinity.libgdx.html.parser.ParsableTags;
+import com.littleinfinity.libgdx.html.parser.ParserFactory;
 import org.jsoup.nodes.Element;
 import org.jsoup.parser.Tag;
-import org.junit.Ignore;
 import org.junit.Test;
 
+import static com.google.common.collect.Sets.newHashSet;
 import static org.fest.assertions.Assertions.assertThat;
 
 public class HeadParserTest {
 
-    class InsideParser extends AnnotatedHTMLTagParser<InsideComponent> {
+    @ParsableTags(tags = {"inside"})
+    static class InsideParser extends AnnotatedHTMLTagParser<InsideComponent> {
 
         @Override
         public InsideComponent parse(Element element) {
-            return null;
+            return new InsideComponent();
         }
     }
 
-    class InsideComponent extends JavaSourceComponent {
+    static class InsideComponent extends JavaSourceComponent {
 
     }
 
@@ -44,8 +48,27 @@ public class HeadParserTest {
     }
 
     @Test
-    @Ignore
     public void shouldParseInsideElement() {
+        // given
+        HeadParser parser = new HeadParser();
+        parser.setFactory(setUpfactory(new InsideParser()));
+        Element head = prepareHeadWithInsideElement();
 
+        // when
+        ComplexComponent parsed = parser.parse(head);
+
+        // then
+        assertThat(parsed.getAll()).hasSize(1);
+        assertThat(parsed.getAll().get(0)).isInstanceOf(InsideComponent.class);
+    }
+
+    private ParserFactory setUpfactory(HTMLTagParser<? extends JavaSourceComponent>... parsers) {
+        return new ParserFactory(newHashSet(parsers));
+    }
+
+    private Element prepareHeadWithInsideElement() {
+        Element head = new Element(Tag.valueOf("head"), "");
+        head.appendChild(new Element(Tag.valueOf("inside"), ""));
+        return head;
     }
 }
