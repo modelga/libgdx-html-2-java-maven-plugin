@@ -14,6 +14,14 @@ public class AnnotatedHTMLTagParserTest {
         }
     }
 
+    class SampleInvalidTagParser extends AnnotatedHTMLTagParser<Object> {
+
+        @Override
+        public Object parse(Element o) {
+            return null;
+        }
+    }
+
     AnnotatedHTMLTagParser<Object> parser = new SampleTagParser();
 
     @Test
@@ -42,5 +50,11 @@ public class AnnotatedHTMLTagParserTest {
 
         // then
         assert !ableToParse : "This element shouldn't be parseable";
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionOnInvalidClass() throws Exception {
+        // when
+        SampleInvalidTagParser parser = new SampleInvalidTagParser();
     }
 }

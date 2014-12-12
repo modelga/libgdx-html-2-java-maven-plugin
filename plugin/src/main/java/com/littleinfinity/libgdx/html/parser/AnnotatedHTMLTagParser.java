@@ -4,11 +4,12 @@ import org.jsoup.nodes.Element;
 
 import static com.google.common.collect.Iterables.contains;
 import static com.littleinfinity.libgdx.html.util.StringFunctions.stringsToLower;
+import static org.apache.commons.lang3.Validate.isTrue;
 
 public abstract class AnnotatedHTMLTagParser<T> implements HTMLTagParser<T> {
 
     public AnnotatedHTMLTagParser() {
-        assert this.getClass().isAnnotationPresent(ParsableTags.class);
+        isTrue(getClass().isAnnotationPresent(ParsableTags.class), "Class %s is not annotated by ParsableTags.", getClass().getName());
     }
 
     @Override
