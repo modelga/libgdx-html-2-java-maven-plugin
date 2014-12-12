@@ -1,6 +1,7 @@
 package com.littleinfinity.libgdx.html;
 
 import com.google.common.io.Files;
+import com.google.inject.Inject;
 import com.littleinfinity.libgdx.html.generator.Generator;
 
 import java.io.IOException;
@@ -12,6 +13,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 public class HtmlFileVisitor extends SimpleFileVisitor<Path> {
     private Generator generator;
 
+    @Inject
     public HtmlFileVisitor(Generator generator) {
         this.generator = generator;
     }

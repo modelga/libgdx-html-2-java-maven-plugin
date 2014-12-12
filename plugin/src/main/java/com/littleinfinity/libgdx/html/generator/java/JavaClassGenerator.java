@@ -1,6 +1,5 @@
 package com.littleinfinity.libgdx.html.generator.java;
 
-import com.google.inject.Singleton;
 import com.littleinfinity.libgdx.html.generator.Generator;
 import com.littleinfinity.libgdx.html.parser.DocumentParser;
 import org.apache.commons.io.IOUtils;
@@ -14,7 +13,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 
-@Singleton
 public class JavaClassGenerator implements Generator {
 
     private BinderFactory binderFactory;

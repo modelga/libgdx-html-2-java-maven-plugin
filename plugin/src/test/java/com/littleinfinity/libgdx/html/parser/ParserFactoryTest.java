@@ -17,7 +17,7 @@ public class ParserFactoryTest {
     }
 
     @Test
-    public void should() {
+    public void shouldReturnHeadParser() {
         // given
         ParserFactory factory = injector.getInstance(ParserFactory.class);
 

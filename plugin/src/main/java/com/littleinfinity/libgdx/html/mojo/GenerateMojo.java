@@ -11,8 +11,6 @@ import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 
-import java.io.IOException;
-
 @Mojo(name = "generate")
 public class GenerateMojo extends AbstractMojo {
 
@@ -24,14 +22,10 @@ public class GenerateMojo extends AbstractMojo {
 
     @Override
     public void execute() throws MojoExecutionException, MojoFailureException {
-        try {
-            bootstrap();
-        } catch (IOException e) {
-            throw (new MojoFailureException("Cannot bootstrap plugin", e));
-        }
+        bootstrap();
     }
 
-    private void bootstrap() throws IOException {
+    private void bootstrap() {
         Injector injector = ModuleConfigurer.getInjector(input, target);
         Bootstraper bootstraper = injector.getInstance(input.getBootstraper());
         bootstraper.bootstrap();

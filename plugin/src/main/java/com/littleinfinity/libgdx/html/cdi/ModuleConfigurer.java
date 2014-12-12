@@ -6,7 +6,6 @@ import com.google.inject.Module;
 import com.littleinfinity.libgdx.html.mojo.parameters.Input;
 import com.littleinfinity.libgdx.html.mojo.parameters.Target;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 import static com.google.common.collect.Lists.newArrayList;
@@ -15,7 +14,7 @@ public final class ModuleConfigurer {
     private ModuleConfigurer() {
     }
 
-    public static Injector getInjector(Input input, Target target) throws IOException {
+    public static Injector getInjector(Input input, Target target) {
         ArrayList<Module> modules = newArrayList();
         modules.add(new ConfigModule(input, target));
         modules.add(new HeadParserModule());
