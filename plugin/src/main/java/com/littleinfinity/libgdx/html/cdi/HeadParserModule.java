@@ -9,15 +9,9 @@ import com.littleinfinity.libgdx.html.parser.head.ConstParser;
 import com.littleinfinity.libgdx.html.parser.head.HeadParser;
 import com.littleinfinity.libgdx.html.parser.head.ImportParser;
 
-import java.io.IOException;
-
 public class HeadParserModule extends AbstractModule {
 
-    public HeadParserModule() throws IOException {
-        init();
-    }
-
-    private void init() throws IOException {
+    public HeadParserModule() {
     }
 
     @Override

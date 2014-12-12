@@ -7,15 +7,9 @@ import com.littleinfinity.libgdx.html.generator.java.ComplexBinder;
 import com.littleinfinity.libgdx.html.generator.java.ImportBinder;
 import com.littleinfinity.libgdx.html.generator.java.MethodBinder;
 
-import java.io.IOException;
-
 public class BinderModule extends AbstractModule {
 
-    public BinderModule() throws IOException {
-        init();
-    }
-
-    private void init() throws IOException {
+    public BinderModule() {
     }
 
     @Override
