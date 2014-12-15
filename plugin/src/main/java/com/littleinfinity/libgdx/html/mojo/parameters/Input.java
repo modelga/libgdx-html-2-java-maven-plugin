@@ -42,8 +42,7 @@ public class Input {
             }
             superclass = superclass.getSuperclass();
         } while (superclass != null);
-
-        return superclass != null && clazz.isAssignableFrom(Bootstraper.class);
+        return false;
     }
 
     public boolean isScanSubdirectories() {
