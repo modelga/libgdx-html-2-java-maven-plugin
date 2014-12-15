@@ -23,12 +23,12 @@ public class GenerateMojoTest {
     private Input input;
     private Field inputField;
 
-    public static class SampleBootstrapper extends Bootstraper {
+    public static class SampleBootstraper extends Bootstraper {
 
         public static boolean BOOTSTRAPP_WAS_CALLED;
 
         @Inject
-        public SampleBootstrapper(Injector injector, Config config) {
+        public SampleBootstraper(Injector injector, Config config) {
             super(injector, config);
         }
 
@@ -51,12 +51,12 @@ public class GenerateMojoTest {
     @Test
     public void shouldRunBootstrapper() throws MojoFailureException, MojoExecutionException {
         // given
-        doReturn(SampleBootstrapper.class).when(input).getBootstraper();
+        doReturn(SampleBootstraper.class).when(input).getBootstraper();
 
         // when
         mojo.execute();
 
         // then
-        assertThat(SampleBootstrapper.BOOTSTRAPP_WAS_CALLED).isTrue();
+        assertThat(SampleBootstraper.BOOTSTRAPP_WAS_CALLED).isTrue();
     }
 }
