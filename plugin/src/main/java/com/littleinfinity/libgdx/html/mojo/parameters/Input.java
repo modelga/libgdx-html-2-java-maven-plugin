@@ -1,10 +1,11 @@
 package com.littleinfinity.libgdx.html.mojo.parameters;
 
-import com.google.common.base.Objects;
 import com.littleinfinity.libgdx.html.Bootstraper;
 import com.littleinfinity.libgdx.html.JavaClassBootstraper;
 
 import java.io.File;
+
+import static com.google.common.base.Strings.isNullOrEmpty;
 
 public class Input {
 
@@ -14,19 +15,35 @@ public class Input {
     private boolean scanSubdirectories;
 
     public Class<? extends Bootstraper> getBootstraper() {
-        try {
-            Class<?> clazz = Class.forName(Objects.firstNonNull(bootstraper, DEFAULT_BOOTSTRAPPER.getName()));
-            if (isImplementingBoostrapper(clazz)) {
-                throw new IllegalArgumentException("class " + clazz.getName() + " does not implements Bootrapper interface");
-            }
-            return (Class<? extends Bootstraper>) clazz;
-        } catch (ClassNotFoundException | AssertionError e) {
-            throw new IllegalArgumentException(e);
+        if (isNullOrEmpty(bootstraper)) {
+            return DEFAULT_BOOTSTRAPPER;
+        } else {
+            return getBootstrappingClass();
         }
     }
 
-    private boolean isImplementingBoostrapper(Class<?> clazz) {
-        return clazz.getSuperclass() != null && clazz.isAssignableFrom(Bootstraper.class);
+    private Class<? extends Bootstraper> getBootstrappingClass() {
+        try {
+            Class<?> clazz = Class.forName(bootstraper);
+            if (!doesImplementingBoostrapper(clazz)) {
+                throw new IllegalArgumentException("class " + clazz.getName() + " does not implements Bootrapper interface");
+            }
+            return (Class<? extends Bootstraper>) clazz;
+        } catch (ClassNotFoundException e) {
+            throw new IllegalArgumentException(e.getMessage());
+        }
+    }
+
+    private boolean doesImplementingBoostrapper(Class<?> clazz) {
+        Class<?> superclass = clazz.getSuperclass();
+        do {
+            if (superclass.equals(Bootstraper.class)) {
+                return true;
+            }
+            superclass = superclass.getSuperclass();
+        } while (superclass != null);
+
+        return superclass != null && clazz.isAssignableFrom(Bootstraper.class);
     }
 
     public boolean isScanSubdirectories() {
