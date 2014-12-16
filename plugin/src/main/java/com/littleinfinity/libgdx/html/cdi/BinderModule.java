@@ -2,10 +2,10 @@ package com.littleinfinity.libgdx.html.cdi;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.multibindings.Multibinder;
-import com.littleinfinity.libgdx.html.generator.java.Binder;
-import com.littleinfinity.libgdx.html.generator.java.ComplexBinder;
-import com.littleinfinity.libgdx.html.generator.java.ImportBinder;
-import com.littleinfinity.libgdx.html.generator.java.MethodBinder;
+import com.littleinfinity.libgdx.html.processing.common.binding.Binder;
+import com.littleinfinity.libgdx.html.processing.complex.ComplexBinder;
+import com.littleinfinity.libgdx.html.processing.importing.ImportBinder;
+import com.littleinfinity.libgdx.html.processing.method.MethodBinder;
 
 public class BinderModule extends AbstractModule {
 

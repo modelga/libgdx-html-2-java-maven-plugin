@@ -1,10 +1,8 @@
 package com.littleinfinity.libgdx.html.mojo;
 
 import com.google.inject.Injector;
-import com.littleinfinity.libgdx.html.Bootstraper;
+import com.littleinfinity.libgdx.html.bootstrap.Bootstraper;
 import com.littleinfinity.libgdx.html.cdi.ModuleConfigurer;
-import com.littleinfinity.libgdx.html.mojo.parameters.Input;
-import com.littleinfinity.libgdx.html.mojo.parameters.Target;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;

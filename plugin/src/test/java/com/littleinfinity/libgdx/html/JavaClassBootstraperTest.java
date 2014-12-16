@@ -2,6 +2,9 @@ package com.littleinfinity.libgdx.html;
 
 import com.google.inject.Injector;
 import com.google.inject.Module;
+import com.littleinfinity.libgdx.html.bootstrap.Config;
+import com.littleinfinity.libgdx.html.bootstrap.HtmlFileVisitor;
+import com.littleinfinity.libgdx.html.bootstrap.JavaClassBootstraper;
 import org.junit.Before;
 import org.junit.Test;
 

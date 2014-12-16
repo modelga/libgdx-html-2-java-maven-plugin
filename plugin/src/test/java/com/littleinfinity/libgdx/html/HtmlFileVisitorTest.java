@@ -1,6 +1,7 @@
 package com.littleinfinity.libgdx.html;
 
-import com.littleinfinity.libgdx.html.generator.Generator;
+import com.littleinfinity.libgdx.html.bootstrap.HtmlFileVisitor;
+import com.littleinfinity.libgdx.html.bootstrap.Generator;
 import org.junit.Before;
 import org.junit.Test;
 

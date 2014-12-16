@@ -1,7 +1,7 @@
 package com.littleinfinity.libgdx.html.cdi;
 
 import com.google.inject.PrivateModule;
-import com.littleinfinity.libgdx.html.generator.Generator;
+import com.littleinfinity.libgdx.html.bootstrap.Generator;
 
 public class GeneratorModule extends PrivateModule {
 

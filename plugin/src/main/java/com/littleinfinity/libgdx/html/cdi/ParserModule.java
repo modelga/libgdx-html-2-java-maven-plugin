@@ -3,11 +3,11 @@ package com.littleinfinity.libgdx.html.cdi;
 import com.google.inject.AbstractModule;
 import com.google.inject.TypeLiteral;
 import com.google.inject.multibindings.Multibinder;
-import com.littleinfinity.libgdx.html.generator.java.JavaSourceComponent;
-import com.littleinfinity.libgdx.html.parser.HTMLTagParser;
-import com.littleinfinity.libgdx.html.parser.head.ComplexParser;
-import com.littleinfinity.libgdx.html.parser.head.ConstParser;
-import com.littleinfinity.libgdx.html.parser.head.ImportParser;
+import com.littleinfinity.libgdx.html.processing.common.joint.JavaSourceComponent;
+import com.littleinfinity.libgdx.html.processing.common.parsing.HTMLTagParser;
+import com.littleinfinity.libgdx.html.processing.complex.ComplexParser;
+import com.littleinfinity.libgdx.html.processing.constant.ConstParser;
+import com.littleinfinity.libgdx.html.processing.complex.ImportParser;
 
 public class ParserModule extends AbstractModule {
 

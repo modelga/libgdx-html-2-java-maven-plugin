@@ -1,7 +1,10 @@
 package com.littleinfinity.libgdx.html.parser;
 
-import com.littleinfinity.libgdx.html.generator.java.ComplexComponent;
-import com.littleinfinity.libgdx.html.generator.java.JavaSourceComponent;
+import com.littleinfinity.libgdx.html.processing.common.parsing.ParserFactory;
+import com.littleinfinity.libgdx.html.processing.complex.ComplexComponent;
+import com.littleinfinity.libgdx.html.processing.common.joint.JavaSourceComponent;
+import com.littleinfinity.libgdx.html.processing.common.parsing.HTMLTagParser;
+import com.littleinfinity.libgdx.html.processing.complex.DocumentParser;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.parser.Tag;

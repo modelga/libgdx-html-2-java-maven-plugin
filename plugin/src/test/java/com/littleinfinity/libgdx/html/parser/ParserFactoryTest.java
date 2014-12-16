@@ -2,7 +2,9 @@ package com.littleinfinity.libgdx.html.parser;
 
 import com.google.inject.Injector;
 import com.littleinfinity.libgdx.html.InjectorUtil;
-import com.littleinfinity.libgdx.html.generator.java.JavaSourceComponent;
+import com.littleinfinity.libgdx.html.processing.common.joint.JavaSourceComponent;
+import com.littleinfinity.libgdx.html.processing.common.parsing.HTMLTagParser;
+import com.littleinfinity.libgdx.html.processing.common.parsing.ParserFactory;
 import org.fest.assertions.Assertions;
 import org.junit.Test;
 

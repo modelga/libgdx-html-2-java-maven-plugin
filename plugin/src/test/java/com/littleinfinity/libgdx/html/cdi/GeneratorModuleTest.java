@@ -2,7 +2,7 @@ package com.littleinfinity.libgdx.html.cdi;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.littleinfinity.libgdx.html.generator.Generator;
+import com.littleinfinity.libgdx.html.bootstrap.Generator;
 import org.jboss.forge.roaster.model.source.JavaClassSource;
 import org.junit.Test;
 

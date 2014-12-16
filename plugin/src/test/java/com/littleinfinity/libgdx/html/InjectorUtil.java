@@ -2,8 +2,8 @@ package com.littleinfinity.libgdx.html;
 
 import com.google.inject.Injector;
 import com.littleinfinity.libgdx.html.cdi.ModuleConfigurer;
-import com.littleinfinity.libgdx.html.mojo.parameters.Input;
-import com.littleinfinity.libgdx.html.mojo.parameters.Target;
+import com.littleinfinity.libgdx.html.mojo.Input;
+import com.littleinfinity.libgdx.html.mojo.Target;
 
 public class InjectorUtil {
     public static Injector getJavaInjector() {

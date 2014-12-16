@@ -1,5 +1,7 @@
 package com.littleinfinity.libgdx.html.parser;
 
+import com.littleinfinity.libgdx.html.processing.common.parsing.AnnotatedHTMLTagParser;
+import com.littleinfinity.libgdx.html.processing.common.parsing.ParsableTags;
 import org.jsoup.nodes.Element;
 import org.jsoup.parser.Tag;
 import org.junit.Test;

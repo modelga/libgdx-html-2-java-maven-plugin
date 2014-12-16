@@ -3,8 +3,8 @@ package com.littleinfinity.libgdx.html.cdi;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
-import com.littleinfinity.libgdx.html.mojo.parameters.Input;
-import com.littleinfinity.libgdx.html.mojo.parameters.Target;
+import com.littleinfinity.libgdx.html.mojo.Input;
+import com.littleinfinity.libgdx.html.mojo.Target;
 
 import java.util.ArrayList;
 

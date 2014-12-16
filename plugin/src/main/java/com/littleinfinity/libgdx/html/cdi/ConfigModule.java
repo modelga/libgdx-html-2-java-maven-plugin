@@ -1,9 +1,9 @@
 package com.littleinfinity.libgdx.html.cdi;
 
 import com.google.inject.AbstractModule;
-import com.littleinfinity.libgdx.html.Config;
-import com.littleinfinity.libgdx.html.mojo.parameters.Input;
-import com.littleinfinity.libgdx.html.mojo.parameters.Target;
+import com.littleinfinity.libgdx.html.bootstrap.Config;
+import com.littleinfinity.libgdx.html.mojo.Input;
+import com.littleinfinity.libgdx.html.mojo.Target;
 
 public class ConfigModule extends AbstractModule {
     private Input input;

@@ -1,6 +1,7 @@
 package com.littleinfinity.libgdx.html.mojo.parameters;
 
-import com.littleinfinity.libgdx.html.Bootstraper;
+import com.littleinfinity.libgdx.html.bootstrap.Bootstraper;
+import com.littleinfinity.libgdx.html.mojo.Input;
 import org.junit.Test;
 
 import java.lang.reflect.Field;
