@@ -25,7 +25,7 @@ public class Input {
     private Class<? extends Bootstraper> getBootstrappingClass() {
         try {
             Class<?> clazz = Class.forName(bootstraper);
-            if (!doesImplementingBoostrapper(clazz)) {
+            if (!doesImplementingBootstraper(clazz)) {
                 throw new IllegalArgumentException("class " + clazz.getName() + " does not implements Bootrapper interface");
             }
             return (Class<? extends Bootstraper>) clazz;
@@ -34,7 +34,7 @@ public class Input {
         }
     }
 
-    private boolean doesImplementingBoostrapper(Class<?> clazz) {
+    private boolean doesImplementingBootstraper(Class<?> clazz) {
         Class<?> superclass = clazz.getSuperclass();
         do {
             if (superclass.equals(Bootstraper.class)) {
