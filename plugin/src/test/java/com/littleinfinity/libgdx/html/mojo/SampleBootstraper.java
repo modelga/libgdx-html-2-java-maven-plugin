@@ -1,4 +1,4 @@
-package com.littleinfinity.libgdx.html.mojo.parameters;
+package com.littleinfinity.libgdx.html.mojo;
 
 import com.google.inject.Injector;
 import com.littleinfinity.libgdx.html.bootstrap.Bootstraper;

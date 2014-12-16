@@ -1,4 +1,4 @@
-package com.littleinfinity.libgdx.html.processing.java;
+package com.littleinfinity.libgdx.html.processing.complex;
 
 import com.littleinfinity.libgdx.html.processing.common.binding.Binder;
 import com.littleinfinity.libgdx.html.processing.common.binding.BinderFactory;

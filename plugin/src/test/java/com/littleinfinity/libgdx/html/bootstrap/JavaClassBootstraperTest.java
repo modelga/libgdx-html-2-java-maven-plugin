@@ -1,4 +1,4 @@
-package com.littleinfinity.libgdx.html;
+package com.littleinfinity.libgdx.html.bootstrap;
 
 import com.google.inject.Injector;
 import com.google.inject.Module;

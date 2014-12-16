@@ -1,4 +1,4 @@
-package com.littleinfinity.libgdx.html.processing.java;
+package com.littleinfinity.libgdx.html.processing.importing;
 
 import com.littleinfinity.libgdx.html.processing.importing.ImportBinder;
 import com.littleinfinity.libgdx.html.processing.importing.ImportComponent;

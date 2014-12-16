@@ -1,4 +1,4 @@
-package com.littleinfinity.libgdx.html.parser.head;
+package com.littleinfinity.libgdx.html.processing.complex;
 
 import com.littleinfinity.libgdx.html.processing.complex.ComplexComponent;
 import com.littleinfinity.libgdx.html.processing.common.joint.JavaSourceComponent;

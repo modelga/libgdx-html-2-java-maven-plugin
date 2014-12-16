@@ -1,4 +1,4 @@
-package com.littleinfinity.libgdx.html.parser.head;
+package com.littleinfinity.libgdx.html.processing.importing;
 
 import com.littleinfinity.libgdx.html.processing.complex.ImportParser;
 import com.littleinfinity.libgdx.html.processing.importing.ImportComponent;

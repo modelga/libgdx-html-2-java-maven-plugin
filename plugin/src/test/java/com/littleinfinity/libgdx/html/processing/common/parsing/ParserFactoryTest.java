@@ -1,7 +1,7 @@
-package com.littleinfinity.libgdx.html.parser;
+package com.littleinfinity.libgdx.html.processing.common.parsing;
 
 import com.google.inject.Injector;
-import com.littleinfinity.libgdx.html.InjectorUtil;
+import com.littleinfinity.libgdx.html.bootstrap.InjectorUtil;
 import com.littleinfinity.libgdx.html.processing.common.joint.JavaSourceComponent;
 import com.littleinfinity.libgdx.html.processing.common.parsing.HTMLTagParser;
 import com.littleinfinity.libgdx.html.processing.common.parsing.ParserFactory;

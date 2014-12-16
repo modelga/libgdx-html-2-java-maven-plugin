@@ -1,9 +1,7 @@
-package com.littleinfinity.libgdx.html.processing.java;
+package com.littleinfinity.libgdx.html.processing.common.binding;
 
 import com.google.inject.Injector;
-import com.littleinfinity.libgdx.html.InjectorUtil;
-import com.littleinfinity.libgdx.html.processing.common.binding.Binder;
-import com.littleinfinity.libgdx.html.processing.common.binding.BinderFactory;
+import com.littleinfinity.libgdx.html.bootstrap.InjectorUtil;
 import com.littleinfinity.libgdx.html.processing.common.joint.JavaSourceComponent;
 import com.littleinfinity.libgdx.html.processing.method.MethodComponent;
 import org.fest.assertions.Assertions;

@@ -1,4 +1,4 @@
-package com.littleinfinity.libgdx.html.parser;
+package com.littleinfinity.libgdx.html.processing.common.parsing;
 
 import com.littleinfinity.libgdx.html.processing.common.parsing.AnnotatedHTMLTagParser;
 import com.littleinfinity.libgdx.html.processing.common.parsing.ParsableTags;

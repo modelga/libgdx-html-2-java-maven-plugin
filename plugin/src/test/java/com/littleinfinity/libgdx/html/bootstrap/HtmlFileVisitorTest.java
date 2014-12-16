@@ -1,4 +1,4 @@
-package com.littleinfinity.libgdx.html;
+package com.littleinfinity.libgdx.html.bootstrap;
 
 import com.littleinfinity.libgdx.html.bootstrap.HtmlFileVisitor;
 import com.littleinfinity.libgdx.html.bootstrap.Generator;
