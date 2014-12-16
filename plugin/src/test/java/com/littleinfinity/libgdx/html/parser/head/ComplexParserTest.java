@@ -13,7 +13,12 @@ import org.junit.Test;
 import static com.google.common.collect.Sets.newHashSet;
 import static org.fest.assertions.Assertions.assertThat;
 
-public class HeadParserTest {
+public class ComplexParserTest {
+
+    @ParsableTags(tags = {"complex"})
+    public class ComplexParserImpl extends ComplexParser {
+
+    }
 
     @ParsableTags(tags = {"inside"})
     static class InsideParser extends AnnotatedHTMLTagParser<InsideComponent> {
@@ -30,15 +35,15 @@ public class HeadParserTest {
 
     @Test
     public void shouldCreateInstance() {
-        HeadParser parser = new HeadParser();
+        ComplexParserImpl parser = new ComplexParserImpl();
         assert parser != null;
     }
 
     @Test
     public void shouldParseEmptyElement() {
         // given
-        HeadParser parser = new HeadParser();
-        Element head = new Element(Tag.valueOf("head"), "");
+        ComplexParserImpl parser = new ComplexParserImpl();
+        Element head = new Element(Tag.valueOf("complex"), "");
 
         // when
         ComplexComponent parsed = parser.parse(head);
@@ -50,9 +55,9 @@ public class HeadParserTest {
     @Test
     public void shouldParseInsideElement() {
         // given
-        HeadParser parser = new HeadParser();
+        ComplexParserImpl parser = new ComplexParserImpl();
         parser.setFactory(setUpfactory(new InsideParser()));
-        Element head = prepareHeadWithInsideElement();
+        Element head = prepareComplexWithInsideElement();
 
         // when
         ComplexComponent parsed = parser.parse(head);
@@ -66,8 +71,8 @@ public class HeadParserTest {
         return new ParserFactory(newHashSet(parsers));
     }
 
-    private Element prepareHeadWithInsideElement() {
-        Element head = new Element(Tag.valueOf("head"), "");
+    private Element prepareComplexWithInsideElement() {
+        Element head = new Element(Tag.valueOf("complex"), "");
         head.appendChild(new Element(Tag.valueOf("inside"), ""));
         return head;
     }

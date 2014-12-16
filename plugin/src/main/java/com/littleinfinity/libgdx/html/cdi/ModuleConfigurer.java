@@ -17,7 +17,7 @@ public final class ModuleConfigurer {
     public static Injector getInjector(Input input, Target target) {
         ArrayList<Module> modules = newArrayList();
         modules.add(new ConfigModule(input, target));
-        modules.add(new HeadParserModule());
+        modules.add(new ParserModule());
         modules.add(new BinderModule());
         return Guice.createInjector(modules);
     }

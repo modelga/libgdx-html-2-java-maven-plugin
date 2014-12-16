@@ -1,6 +1,5 @@
 package com.littleinfinity.libgdx.html.parser.head;
 
-import com.google.inject.Singleton;
 import com.littleinfinity.libgdx.html.generator.java.ComplexComponent;
 import com.littleinfinity.libgdx.html.generator.java.JavaSourceComponent;
 import com.littleinfinity.libgdx.html.parser.AnnotatedHTMLTagParser;
@@ -15,10 +14,8 @@ import java.util.Optional;
 import static java.util.Objects.requireNonNull;
 import static java.util.Optional.ofNullable;
 
-@Singleton
-@ParsableTags(tags = {"head"})
-public class HeadParser extends AnnotatedHTMLTagParser<ComplexComponent> implements FactoryDependant<ParserFactory> {
-
+@ParsableTags(tags = {"head", "body"})
+public class ComplexParser extends AnnotatedHTMLTagParser<ComplexComponent> implements FactoryDependant<ParserFactory> {
     private ParserFactory factory;
 
     @Override
@@ -34,7 +31,6 @@ public class HeadParser extends AnnotatedHTMLTagParser<ComplexComponent> impleme
         return complexComponent;
     }
 
-    @Override
     public void setFactory(ParserFactory factory) {
         this.factory = factory;
     }
