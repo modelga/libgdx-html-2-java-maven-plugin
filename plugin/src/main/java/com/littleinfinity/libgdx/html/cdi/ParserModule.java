@@ -16,6 +16,10 @@ public class ParserModule extends AbstractModule {
 
     @Override
     protected void configure() {
+        tagParsers();
+    }
+
+    private void tagParsers() {
         TypeLiteral<HTMLTagParser<? extends JavaSourceComponent>> type = new TypeLiteral<HTMLTagParser<? extends JavaSourceComponent>>() {
         };
         Multibinder<HTMLTagParser<? extends JavaSourceComponent>> binder = Multibinder.newSetBinder(binder(), type);
