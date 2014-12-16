@@ -5,7 +5,7 @@ import com.littleinfinity.libgdx.html.generator.java.ComplexComponent;
 import com.littleinfinity.libgdx.html.generator.java.JavaSourceComponent;
 import org.jsoup.nodes.Document;
 
-import java.util.Objects;
+import static java.util.Objects.nonNull;
 
 public class DocumentParser implements GenericParser<ComplexComponent, Document> {
 
@@ -26,6 +26,6 @@ public class DocumentParser implements GenericParser<ComplexComponent, Document>
 
     @Override
     public boolean isAbleToParse(Document document) {
-        return Objects.nonNull(document.head()); // TODO add checking nonNull for body too.
+        return nonNull(document.head()) && nonNull(document.body()); // TODO add checking nonNull for body too.
     }
 }

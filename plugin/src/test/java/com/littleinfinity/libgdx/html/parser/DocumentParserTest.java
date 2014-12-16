@@ -6,7 +6,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.parser.Tag;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.fest.assertions.Assertions.assertThat;
@@ -39,7 +38,6 @@ public class DocumentParserTest {
     }
 
     @Test
-    @Ignore // TODO need to be implemented
     public void shouldNotBeAbleToParseWithoutBodySection() {
         // given
         Document document = createDocumentWithElements("head");
