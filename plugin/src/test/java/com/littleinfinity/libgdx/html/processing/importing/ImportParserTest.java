@@ -1,7 +1,5 @@
 package com.littleinfinity.libgdx.html.processing.importing;
 
-import com.littleinfinity.libgdx.html.processing.complex.ImportParser;
-import com.littleinfinity.libgdx.html.processing.importing.ImportComponent;
 import org.fest.assertions.Assertions;
 import org.jsoup.nodes.Element;
 import org.jsoup.parser.Tag;

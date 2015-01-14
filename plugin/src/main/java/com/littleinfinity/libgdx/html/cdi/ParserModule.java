@@ -7,7 +7,7 @@ import com.littleinfinity.libgdx.html.processing.common.joint.JavaSourceComponen
 import com.littleinfinity.libgdx.html.processing.common.parsing.HTMLTagParser;
 import com.littleinfinity.libgdx.html.processing.complex.ComplexParser;
 import com.littleinfinity.libgdx.html.processing.constant.ConstParser;
-import com.littleinfinity.libgdx.html.processing.complex.ImportParser;
+import com.littleinfinity.libgdx.html.processing.importing.ImportParser;
 
 public class ParserModule extends AbstractModule {
 

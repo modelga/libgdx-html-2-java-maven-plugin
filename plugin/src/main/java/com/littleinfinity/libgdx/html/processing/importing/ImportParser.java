@@ -1,4 +1,4 @@
-package com.littleinfinity.libgdx.html.processing.complex;
+package com.littleinfinity.libgdx.html.processing.importing;
 
 import com.google.inject.Singleton;
 import com.littleinfinity.libgdx.html.processing.importing.ImportComponent;

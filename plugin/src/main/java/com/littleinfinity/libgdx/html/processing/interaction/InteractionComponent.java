@@ -4,9 +4,6 @@ import com.littleinfinity.libgdx.html.processing.common.joint.JavaSourceComponen
 
 import java.util.List;
 
-import static com.google.common.collect.Iterables.filter;
-import static com.google.common.collect.Lists.newArrayList;
-
 public class InteractionComponent extends JavaSourceComponent {
 
     private List<InteractionType> interactions;
