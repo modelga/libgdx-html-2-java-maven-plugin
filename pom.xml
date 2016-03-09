@@ -19,7 +19,7 @@
         <maven-plugin-annotations.version>3.3</maven-plugin-annotations.version>
         <guice.version>3.0</guice.version>
         <junit.version>4.11</junit.version>
-        <commons-collections.version>3.2.1</commons-collections.version>
+        <commons-collections.version>3.2.2</commons-collections.version>
         <commons-lang3.version>3.3.2</commons-lang3.version>
         <guava.version>14.0.1</guava.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
